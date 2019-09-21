@@ -27,6 +27,17 @@
 
 #define BOARD_INFO_NAME "Anycubic RAMPS 1.4"
 
+#define LARGE_FLASH true
+
+#define LED_PIN 13
+#define Z_MIN_PROBE_PIN 2
+#define FIL_RUNOUT_PIN 19
+
+#ifdef OutageTest
+  #define OUTAGETEST_PIN 79
+  #define OUTAGECON_PIN 58
+#endif
+
 //
 // Servos
 //
@@ -45,6 +56,44 @@
 #define TRIGORILLA_FAN0_PIN        9   // Anycubic Kossel: Usually the part cooling fan
 #define TRIGORILLA_FAN1_PIN        7   // Anycubic Kossel: Unused
 #define TRIGORILLA_FAN2_PIN       44   // Anycubic Kossel: Hotend fan
+
+#define Y2_STEP_PIN 36
+#define Y2_DIR_PIN 34
+#define Y2_ENABLE_PIN 30
+
+#define Z2_STEP_PIN 36
+#define Z2_DIR_PIN 34
+#define Z2_ENABLE_PIN 30
+
+#define Y_MIN_PIN 42
+#define X_MAX_PIN 43
+
+#define CONTROLLER_FAN_PIN 7
+
+#define TEMP_2_PIN 12
+
+#define SERVO0_PIN 6
+
+#if NUM_SERVOS > 1
+  #define SERVO1_PIN 11
+#endif
+
+#if NUM_SERVOS > 2
+  #define SERVO2_PIN 5
+#endif
+
+#if NUM_SERVOS > 3
+  #define SERVO3_PIN 4
+#endif
+
+#define BEEPER_PIN 31
+#define SD_DETECT_PIN 49
+
+#if defined(REPRAP_DISCOUNT_SMART_CONTROLLER) || defined(G3D_PANEL)
+  #define KILL_PIN 41
+#else
+  #define KILL_PIN -1
+#endif
 
 // Remap MOSFET pins to common usages:
 

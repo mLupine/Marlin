@@ -438,7 +438,9 @@
       #define LCD_PINS_D4       25
 
       #if DISABLED(NEWPANEL)
-        #define BEEPER_PIN      37
+        #ifndef BEEPER_PIN
+          #define BEEPER_PIN      37
+        #endif
       #endif
 
     #elif ENABLED(ZONESTAR_LCD)
@@ -471,7 +473,9 @@
       #define LCD_PINS_D7       29
 
       #if DISABLED(NEWPANEL)
-        #define BEEPER_PIN      33
+        #ifndef BEEPER_PIN
+          #define BEEPER_PIN      33
+        #endif
       #endif
 
     #endif
@@ -494,7 +498,9 @@
 
     #if ENABLED(REPRAP_DISCOUNT_SMART_CONTROLLER)
 
-      #define BEEPER_PIN        37
+        #ifndef BEEPER_PIN
+          #define BEEPER_PIN      37
+        #endif
 
       #if ENABLED(CR10_STOCKDISPLAY)
         #define BTN_EN1         17
@@ -544,7 +550,9 @@
       #define DOGLCD_A0         44
       #define LCD_SCREEN_ROT_180
 
-      #define BEEPER_PIN        33
+        #ifndef BEEPER_PIN
+          #define BEEPER_PIN      33
+        #endif
       #define STAT_LED_RED_PIN  32
       #define STAT_LED_BLUE_PIN 35
 
@@ -560,7 +568,9 @@
       #define DOGLCD_CS         29
       #define DOGLCD_A0         27
 
-      #define BEEPER_PIN        23
+      #ifndef BEEPER_PIN
+        #define BEEPER_PIN      23
+      #endif
       #define LCD_BACKLIGHT_PIN 33
 
       #define BTN_EN1           35
@@ -573,7 +583,9 @@
 
     #elif EITHER(MKS_MINI_12864, FYSETC_MINI_12864)
 
-      #define BEEPER_PIN        37
+      #ifndef BEEPER_PIN
+        #define BEEPER_PIN      37
+      #endif
       #define BTN_ENC           35
       #define SD_DETECT_PIN     49
       #define KILL_PIN          41
@@ -628,7 +640,9 @@
 
     #elif ENABLED(MINIPANEL)
 
-      #define BEEPER_PIN        42
+      #ifndef BEEPER_PIN
+        #define BEEPER_PIN      42
+      #endif
       // not connected to a pin
       #define LCD_BACKLIGHT_PIN 65   // backlight LED on A11/D65
 
@@ -659,7 +673,9 @@
     #else
 
       // Beeper on AUX-4
-      #define BEEPER_PIN        33
+      #ifndef BEEPER_PIN
+        #define BEEPER_PIN      33
+      #endif
 
       // Buttons are directly attached to AUX-2
       #if ENABLED(REPRAPWORLD_KEYPAD)

@@ -322,6 +322,8 @@
   #include "teensy2/pins_TEENSY2.h"             // AT90USB1286                            env:teensy20
 #elif MB(5DPRINT)
   #include "teensy2/pins_5DPRINT.h"             // AT90USB1286                            env:at90usb1286_dfu
+#elif MB(TRIGORILLA)
+  #include "ramps/pins_TRIGORILLA_14.h"
 
 //
 // LPC1768 ARM Cortex M3
