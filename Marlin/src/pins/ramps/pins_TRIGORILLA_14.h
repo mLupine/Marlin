@@ -86,7 +86,7 @@
   #define SERVO3_PIN 4
 #endif
 
-#define BEEPER_PIN 31
+//#define BEEPER_PIN 31
 #define SD_DETECT_PIN 49
 
 #if defined(REPRAP_DISCOUNT_SMART_CONTROLLER) || defined(G3D_PANEL)
