@@ -68,6 +68,9 @@
 #define Y_MIN_PIN 42
 #define X_MAX_PIN 43
 
+#define X_SERIAL_RX_PIN 15
+#define X_SERIAL_TX_PIN 14
+
 #define CONTROLLER_FAN_PIN 7
 
 #define TEMP_2_PIN 12
