@@ -57,18 +57,20 @@
 #define TRIGORILLA_FAN1_PIN        7   // Anycubic Kossel: Unused
 #define TRIGORILLA_FAN2_PIN       44   // Anycubic Kossel: Hotend fan
 
-// #define Y2_STEP_PIN 36
-// #define Y2_DIR_PIN 34
-// #define Y2_ENABLE_PIN 30
+#define Z_STEP_PIN 36
+#define Z_DIR_PIN 34
+#define Z_ENABLE_PIN 30
 
-#define Z2_STEP_PIN 36
-#define Z2_DIR_PIN 34
-#define Z2_ENABLE_PIN 30
+#define Z2_STEP_PIN 46
+#define Z2_DIR_PIN 48
+#define Z2_ENABLE_PIN 62
 
 #define X_MIN_PIN 50
 #define Y_MIN_PIN 51
 #define X_MAX_PIN 50
 #define Y_MAX_PIN 51
+#define Z_MIN_PIN 42
+#define Z_MAX_PIN 43
 
 #define X_SERIAL_RX_PIN 12
 #define X_SERIAL_TX_PIN 14
