@@ -647,11 +647,11 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 // #define Z_MIN_PROBE_ENDSTOP_INVERTING true // set to true to invert the logic of the probe.
 
@@ -675,9 +675,9 @@
 #define Z_DRIVER_TYPE  TMC2209
 //#define X2_DRIVER_TYPE A4988
 //#define Y2_DRIVER_TYPE A4988
-// #define Z2_DRIVER_TYPE TMC2209
+#define Z2_DRIVER_TYPE TMC2209
 //#define Z3_DRIVER_TYPE A4988
-#define E0_DRIVER_TYPE TMC2209
+// #define E0_DRIVER_TYPE TMC2209
 //#define E1_DRIVER_TYPE A4988
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
@@ -1630,7 +1630,7 @@
  * you must uncomment the following option or it won't work.
  *
  */
-#define SDSUPPORT
+// #define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED

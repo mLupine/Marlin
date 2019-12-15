@@ -65,11 +65,23 @@
 #define Z2_DIR_PIN 34
 #define Z2_ENABLE_PIN 30
 
+#define X_MIN_PIN 43
 #define Y_MIN_PIN 42
 #define X_MAX_PIN 43
+#define Y_MAX_PIN 42
+// #define X_STOP_PIN 43
+// #define Y_STOP_PIN 42
 
-#define X_SERIAL_RX_PIN 15
+#define X_SERIAL_RX_PIN 12
 #define X_SERIAL_TX_PIN 14
+#define Y_SERIAL_RX_PIN 12
+#define Y_SERIAL_TX_PIN 14
+#define Z_SERIAL_RX_PIN 12
+#define Z_SERIAL_TX_PIN 14
+#define Z2_SERIAL_RX_PIN 12
+#define Z2_SERIAL_TX_PIN 14
+// #define E0_SERIAL_RX_PIN 52
+// #define E0_SERIAL_TX_PIN 15
 
 #define CONTROLLER_FAN_PIN 7
 

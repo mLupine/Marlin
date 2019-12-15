@@ -569,8 +569,8 @@
 // @section homing
 
 // Homing hits each endstop, retracts by these distances, then does a slower bump.
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
+#define X_HOME_BUMP_MM 0
+#define Y_HOME_BUMP_MM 0
 #define Z_HOME_BUMP_MM 2
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 //#define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
@@ -2018,11 +2018,11 @@
    * on the same serial port, either here or in your board's pins file.
    */
   #define  X_SLAVE_ADDRESS 0
-  #define  Y_SLAVE_ADDRESS 0
-  #define  Z_SLAVE_ADDRESS 0
+  #define  Y_SLAVE_ADDRESS 1
+  #define  Z_SLAVE_ADDRESS 2
   #define X2_SLAVE_ADDRESS 0
   #define Y2_SLAVE_ADDRESS 0
-  #define Z2_SLAVE_ADDRESS 0
+  #define Z2_SLAVE_ADDRESS 3
   #define Z3_SLAVE_ADDRESS 0
   #define E0_SLAVE_ADDRESS 0
   #define E1_SLAVE_ADDRESS 0
@@ -2113,7 +2113,7 @@
    * Connect the stepper driver's DIAG1 pin to the X/Y endstop pin.
    * X, Y, and Z homing will always be done in spreadCycle mode.
    *
-   * X/Y/Z_STALL_SENSITIVITY is the default stall threshold.
+   * X/Y/Z_STALL_SENSITIVITY i2s the default stall threshold.
    * Use M914 X Y Z to set the stall threshold at runtime:
    *
    *  Sensitivity   TMC2209   Others
@@ -2131,7 +2131,7 @@
    *
    * TMC2209 requires STEALTHCHOP enabled for SENSORLESS_HOMING
    */
-  //#define SENSORLESS_HOMING // StallGuard capable drivers only
+  #define SENSORLESS_HOMING // StallGuard capable drivers only
 
   /**
    * Use StallGuard2 to probe the bed with the nozzle.
@@ -2149,7 +2149,7 @@
     //#define Z_STALL_SENSITIVITY  8
     //#define SPI_ENDSTOPS              // TMC2130 only
     //#define HOME_USING_SPREADCYCLE
-    //#define IMPROVE_HOMING_RELIABILITY
+    #define IMPROVE_HOMING_RELIABILITY
   #endif
 
   /**
