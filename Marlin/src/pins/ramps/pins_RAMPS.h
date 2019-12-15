@@ -133,16 +133,28 @@
   #define Y_CS_PIN         49
 #endif
 
-#define Z_STEP_PIN         46
-#define Z_DIR_PIN          48
-#define Z_ENABLE_PIN       62
+#ifndef Z_STEP_PIN
+  #define Z_STEP_PIN         46
+#endif
+#ifndef Z_DIR_PIN
+  #define Z_DIR_PIN          48
+#endif
+#ifndef Z_ENABLE_PIN
+  #define Z_ENABLE_PIN       62
+#endif
 #ifndef Z_CS_PIN
   #define Z_CS_PIN         40
 #endif
 
-#define E0_STEP_PIN        26
-#define E0_DIR_PIN         28
-#define E0_ENABLE_PIN      24
+#ifndef E0_STEP_PIN
+  #define E0_STEP_PIN        26
+#endif
+#ifndef E0_DIR_PIN
+  #define E0_DIR_PIN         28
+#endif
+#ifndef E0_ENABLE_PIN
+  #define E0_ENABLE_PIN      24
+#endif
 #ifndef E0_CS_PIN
   #define E0_CS_PIN        42
 #endif
@@ -417,7 +429,7 @@
   #if ENABLED(REPRAPWORLD_GRAPHICAL_LCD)
 
     #define LCD_PINS_RS         49   // CS chip select /SS chip slave select
-    #define LCD_PINS_ENABLE     51   // SID (MOSI)
+    #define LCD_PINS_ENABLE     -1   // SID (MOSI)
     #define LCD_PINS_D4         52   // SCK (CLK) clock
 
   #elif BOTH(NEWPANEL, PANEL_ONE)
